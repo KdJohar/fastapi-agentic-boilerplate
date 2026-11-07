@@ -1,0 +1,18 @@
+{
+  "description": "Repository safety policy for agent shell commands.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^Bash$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/env python3 \"$(git rev-parse --show-toplevel)/.codex/hooks/pre_tool_use_policy.py\"",
+            "timeout": 5,
+            "statusMessage": "Checking repository safety policy"
+          }
+        ]
+      }
+    ]
+  }
+}

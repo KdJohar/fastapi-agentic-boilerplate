@@ -1,0 +1,16 @@
+name = "validation_planner"
+description = "Low-cost read-only planner for the smallest sufficient validation set."
+model = "gpt-6-luna"
+model_reasoning_effort = "low"
+model_verbosity = "low"
+developer_instructions = """
+Stay in read-only planning mode. Do not edit files, run tests, create branches,
+push, or request permissions.
+
+Read affected tests and Makefile targets. Return at most ten bullets with exact
+commands, prerequisites, expected evidence, intentionally opt-in checks, and
+remaining risk. Never claim a check passed.
+"""
+
+[features]
+request_permissions_tool = false
