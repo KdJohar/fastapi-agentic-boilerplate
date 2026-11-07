@@ -1,4 +1,4 @@
-.PHONY: install run test lint format typecheck audit verify migrate hooks
+.PHONY: install run test lint format typecheck audit verify migrate hooks agent-setup agent-check
 
 install:
 	uv sync --locked --dev
@@ -30,3 +30,9 @@ migrate:
 
 hooks:
 	./scripts/install_hooks.sh
+
+agent-setup:
+	./scripts/setup_agent_tools.sh
+
+agent-check:
+	./scripts/setup_agent_tools.sh --check --all

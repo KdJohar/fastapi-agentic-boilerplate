@@ -6,6 +6,19 @@ AI multiplies velocity here by compressing repeatable work—mapping, scaffoldin
 test selection, contract review, and documentation—while engineers retain the
 decisions that carry product, architecture, security, or production risk.
 
+## Tool setup
+
+Run the repository setup script and choose Claude Code, Codex, or both:
+
+```bash
+./scripts/setup_agent_tools.sh
+```
+
+It checks the bundled skills, Node.js, both client CLIs, Superpowers, Ponytail,
+CodeGraph client configuration, and the local CodeGraph index. Missing components
+produce warnings. Installation requires confirmation unless `--yes` is supplied.
+Use `--check --all` for a read-only audit.
+
 ## Workflow
 
 | Stage | Default tool or role | Output |
@@ -47,7 +60,7 @@ mood, blank-line separation, body presence, and 72-character body wrapping.
 
 The repository includes a focused `superpowers-workflow` skill so the core loop
 works without a global plugin. For the full upstream library, install the official
-MIT-licensed Superpowers plugin for your harness:
+MIT-licensed Superpowers plugin with the setup script or your client:
 
 - Codex: open `/plugins`, search for `Superpowers`, and install it.
 - Claude Code: `/plugin install superpowers@claude-plugins-official`.
@@ -70,3 +83,6 @@ Ponytail constrains the solution after the workflow identifies the need. It asks
 whether the feature must exist, whether the repository already solves it, and
 whether standard-library or installed functionality is sufficient. It never cuts
 validation, security, error handling, tests for risky behavior, or requested scope.
+
+The repository bundles a focused Ponytail skill. The setup script can also install
+the full upstream plugin for Claude Code and Codex.

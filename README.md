@@ -69,6 +69,31 @@ make verify
 make hooks
 ```
 
+## Install agent tools
+
+The focused repository skills work immediately after cloning. Run the setup
+script to check or install the full Superpowers and Ponytail plugins and connect
+CodeGraph to Claude Code, Codex, or both:
+
+```bash
+./scripts/setup_agent_tools.sh
+```
+
+The default command opens a target menu and asks before every supported
+installation. Other useful modes are:
+
+```bash
+# Only report missing tools; change nothing
+./scripts/setup_agent_tools.sh --check --all
+
+# Configure both clients and accept supported installers
+./scripts/setup_agent_tools.sh --all --yes
+```
+
+The script never silently installs a plugin. Codex currently installs
+Superpowers through its `/plugins` browser, so the script prints that manual step
+when needed. Run `make agent-check` at any time to verify the setup.
+
 ## How to give the agent a prompt
 
 Open the repository in your coding agent and describe the outcome, requirements,
