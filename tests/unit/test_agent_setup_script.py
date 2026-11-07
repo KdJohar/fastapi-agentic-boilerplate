@@ -41,7 +41,7 @@ def test_agent_setup_check_warns_without_clients(tmp_path: Path) -> None:
     )
 
     assert result.returncode == 1
-    assert "Repository skill: loadless-engineering-developer" in result.stdout
+    assert "Repository skill: engineering-developer" in result.stdout
     assert "Claude Code CLI: missing" in result.stdout
     assert "Codex CLI: missing" in result.stdout
     assert "CodeGraph CLI: missing" in result.stdout

@@ -42,7 +42,7 @@ The agent accelerates mechanical work and gathers evidence. The developer still
 owns product intent, architecture, data compatibility, production actions, and
 the final merge decision.
 
-The `loadless-engineering-developer` skill starts after the requirement and
+The `engineering-developer` skill starts after the requirement and
 architecture are accepted. It keeps implementation traceable to those decisions,
 preserves the repository layers, and requires API documentation, failure cases,
 tests, and operational evidence before handoff.

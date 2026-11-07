@@ -1,9 +1,9 @@
 ---
-name: loadless-engineering-developer
+name: engineering-developer
 description: Use after a PRD and its architecture decision records are accepted to implement a complete backend change without redesigning the approved contract.
 ---
 
-# Loadless engineering developer
+# Engineering developer
 
 Turn an approved PRD and accepted architecture decision records into the
 smallest production-ready implementation. This skill implements decisions; it

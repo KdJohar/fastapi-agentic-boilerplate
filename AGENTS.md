@@ -38,7 +38,7 @@ Every non-trivial change follows this sequence:
 
 Use the local `superpowers-workflow` skill for this sequence and `ponytail` to
 keep the solution minimal. After the requirement and architecture are accepted,
-use `loadless-engineering-developer` to preserve those decisions through the
+use `engineering-developer` to preserve those decisions through the
 complete implementation. For a tiny documentation-only correction, combine the
 plan and plan review into a few bullets, but do not skip verification.
 

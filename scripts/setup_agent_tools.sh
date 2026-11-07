@@ -210,7 +210,7 @@ install_codegraph() {
 
 verify_bundled_skills() {
   local skill
-  for skill in superpowers-workflow ponytail codegraph-first loadless-engineering-developer; do
+  for skill in superpowers-workflow ponytail codegraph-first engineering-developer; do
     if [[ -f "${PROJECT_ROOT}/.agents/skills/${skill}/SKILL.md" ]]; then
       ok "Repository skill: ${skill}"
     else
