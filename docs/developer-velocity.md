@@ -59,3 +59,27 @@ metrics. Compare similar work types and use trends, not rankings.
 The starter includes request rate, route-template latency, status and error rate,
 request IDs, structured logs, database readiness, version, and environment. Add
 the next metric only when it supports an SLO or an operating decision.
+
+## First-month adoption plan
+
+Start with one important workflow and expand only when the evidence supports it.
+
+| Week | Work | Deliverable | Decision signal |
+|---|---|---|---|
+| 1 | Map the critical path and capture delivery and runtime baselines | Code-path map, risk register, baseline dashboard, fixed evaluation set | Known bottlenecks and agreed definitions |
+| 2 | Pilot reviewed plans, regression tests, and contract review on a small change | One verified vertical slice and recorded human review findings | Plan revision rate, review pickup, first-pass CI |
+| 3 | Exercise retries, partial failure, idempotency, observability, and rollback | Failure-path tests, actionable metrics, rollout and recovery notes | Validation catches, false positives, rework |
+| 4 | Compare the pilot with its baseline and tune roles, prompts, and checks | Team playbook, reusable templates, and an adoption decision | Cycle time, quality, reliability, cost per accepted change |
+
+Ship these artifacts in the first month:
+
+1. A current execution-path map with owners, dependencies, and known risks.
+2. A baseline dashboard for delivery flow and service health.
+3. A reviewed plan, PR review, and verification workflow using the scoped agents.
+4. Focused regression and failure-path tests for the selected workflow.
+5. A short team playbook stating where AI helps, where human approval is
+   required, and which evidence closes a change.
+
+Keep the pilot only if it reduces elapsed delivery time without increasing
+rework, escaped defects, change failures, or recovery time. Treat an unavailable
+cost or quality signal as unknown rather than zero.

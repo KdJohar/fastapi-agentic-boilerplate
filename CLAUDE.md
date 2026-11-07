@@ -17,7 +17,9 @@ For every non-trivial task:
 
 Use the repository skills in `.agents/skills/`. The `superpowers-workflow` skill
 owns the delivery sequence, `ponytail` prevents unnecessary code, and
-`codegraph-first` keeps context retrieval focused.
+`codegraph-first` keeps context retrieval focused. Once the requirement and
+architecture are accepted, `loadless-engineering-developer` turns them into a
+complete vertical slice without inventing new product or architecture decisions.
 
 ## Architecture
 

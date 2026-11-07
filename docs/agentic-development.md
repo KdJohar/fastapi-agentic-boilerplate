@@ -27,12 +27,17 @@ Use `--check --all` for a read-only audit.
 | Map | CodeGraph + `backend_mapper` | Execution path and blast radius |
 | Plan | Superpowers workflow | Paths, risks, checks, non-goals |
 | Review plan | `plan_reviewer` | Corrected plan or explicit trade-offs |
-| Execute | Parent + FastAPI skill + Ponytail | Small tested change |
+| Execute | Parent + Loadless Developer + FastAPI skill + Ponytail | Traceable tested change |
 | Review contracts | `contract_guard` | Evidence-based findings |
 | Verify | `validation_planner` + `make verify` | Reproducible evidence |
 
 The parent is the only writer. Read-only roles can run concurrently only when
 their questions are independent; three threads is a ceiling.
+
+`loadless-engineering-developer` begins after the requirement and architecture
+are accepted. It preserves those decisions through implementation, API
+documentation, failure handling, tests, observability, and handoff. A material
+decision gap goes back to a person instead of being filled with an assumption.
 
 ## Cost controls
 
